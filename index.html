@@ -14,12 +14,17 @@
             color: #4CAF50;
             display: inline; /* 使h1元素成为内联元素 */
         }
+        .date {
+            color: black; /* 设置黑色字体 */
+            font-size: 1.5em; /* 调整字体大小 */
+            margin-top: 10px; /* 增加顶部间距 */
+        }
     </style>
 </head>
 <body>
-    <h1>doudou和jelly已经</h1>
-    <span id="days-passed"></span> <!-- 使用span代替p -->
-    
+    <h1>doudou和jelly已经 <span id="days-passed"></span>天</h1> <!-- 计算天数 -->
+    <div class="date">2024.09.15中秋</div> <!-- 显示日期 -->
+
     <script>
         // 定义开始日期
         const startDate = new Date("2024-09-15");
@@ -29,7 +34,7 @@
         const timeDiff = currentDate - startDate;
         const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
         // 更新页面内容
-        document.getElementById("days-passed").innerText = `${daysPassed}天`; // 更新为“36天”
+        document.getElementById("days-passed").innerText = daysPassed; // 仅更新天数
     </script>
 </body>
 </html>
