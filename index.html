@@ -12,13 +12,14 @@
         }
         h1 {
             color: #4CAF50;
+            display: inline; /* 使h1元素成为内联元素 */
         }
     </style>
 </head>
 <body>
-    <h1>和jelly</h1>
-    <p id="days-passed"></p>
-
+    <h1>doudou和jelly已经</h1>
+    <span id="days-passed"></span> <!-- 使用span代替p -->
+    
     <script>
         // 定义开始日期
         const startDate = new Date("2024-09-15");
@@ -28,7 +29,7 @@
         const timeDiff = currentDate - startDate;
         const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
         // 更新页面内容
-        document.getElementById("days-passed").innerText = ` ${daysPassed} 2024 年 9 月 15 日`;
+        document.getElementById("days-passed").innerText = `${daysPassed}天`; // 更新为“36天”
     </script>
 </body>
 </html>
